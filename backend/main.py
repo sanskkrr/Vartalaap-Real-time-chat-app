@@ -83,10 +83,11 @@ async def websocket_endpoint(
 
             recipient_uid = data.get("to")
             message = data.get("message")
-            save_message(uid, recipient_uid, message)
+            
 
             if not recipient_uid or not message:
                 continue
+            save_message(uid, recipient_uid, message)
 
             await manager.send_private(message, sender_uid=uid, recipient_uid=recipient_uid)
 
