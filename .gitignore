@@ -1,0 +1,7 @@
+myenv/
+__pycache__/
+.env
+firebase_key.json
+chat.db
+*.pyc
+node_modules/

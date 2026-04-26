@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Vartalaap</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <style>
+.particle {
+  position: absolute;
+  width: 6px;
+  height: 6px;
+  background: white;
+  opacity: 0.2;
+  border-radius: 50%;
+  animation: float 10s infinite linear;
+}
+
+.particle:nth-child(1) { left: 20%; animation-duration: 12s; }
+.particle:nth-child(2) { left: 50%; animation-duration: 15s; }
+.particle:nth-child(3) { left: 80%; animation-duration: 10s; }
+
+@keyframes float {
+  0% { transform: translateY(100vh); }
+  100% { transform: translateY(-10vh); }
+}
+</style>
+</head>
+
+<body class="bg-gradient-to-br from-gray-900 via-gray-800 to-black text-white">
+  <div class="absolute inset-0 overflow-hidden -z-10">
+
+  <div class="particle"></div>
+  
+
+  <div class="particle"></div>
+
+  <div class="particle"></div>
+
+</div>
+
+<!-- Navbar -->
+<nav class="flex justify-between items-center p-6">
+  <h1 class="text-2xl font-bold">💬 Vartalaap</h1>
+  <a href="login.html" class="bg-blue-500 px-5 py-2 rounded-lg hover:bg-blue-600 transition">
+    Login
+  </a>
+</nav>
+
+<!-- Hero Section -->
+<section class="flex flex-col items-center justify-center text-center px-6 py-20">
+  <h1 class="text-5xl md:text-6xl font-bold mb-6 leading-tight">
+    Connect Instantly.<br>
+    Chat Seamlessly.
+  </h1>
+
+  <p class="text-gray-400 text-lg max-w-xl mb-8">
+    Vartalaap is a secure, real-time messaging platform powered by modern web technologies.
+    Experience lightning-fast communication with privacy and simplicity at its core.
+  </p>
+
+  <a href="login.html"
+    class="bg-blue-500 px-8 py-3 rounded-lg text-lg hover:bg-blue-600 transition shadow-lg">
+    Start Chatting 🚀
+  </a>
+</section>
+
+<!-- Features Section -->
+<section class="px-8 py-16 grid md:grid-cols-3 gap-8 text-center">
+
+  <div class="bg-gray-800 p-6 rounded-xl shadow-lg">
+    <h2 class="text-xl font-semibold mb-2">⚡ Real-time Chat</h2>
+    <p class="text-gray-400">
+      Instant messaging using WebSockets for seamless communication.
+    </p>
+  </div>
+
+  <div class="bg-gray-800 p-6 rounded-xl shadow-lg">
+    <h2 class="text-xl font-semibold mb-2">🔐 Secure Auth</h2>
+    <p class="text-gray-400">
+      Firebase-powered authentication ensures safe and reliable login.
+    </p>
+  </div>
+
+  <div class="bg-gray-800 p-6 rounded-xl shadow-lg">
+    <h2 class="text-xl font-semibold mb-2">💬 Private Messaging</h2>
+    <p class="text-gray-400">
+      One-to-one chat with efficient backend routing system.
+    </p>
+  </div>
+
+</section>
+
+<!-- Footer -->
+<footer class="text-center py-6 text-gray-500 text-sm border-t border-gray-800">
+  © 2026 Vartalaap. Built with FastAPI & Firebase.
+</footer>
+
+</body>
+</html>
